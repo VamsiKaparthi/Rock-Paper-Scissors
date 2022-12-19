@@ -15,29 +15,29 @@ function playRound(playerSelection,computerSelection){
     }
     else if(playerSelection=="rock"){
         if(computerSelection=="scissors"){
-            console.log("You win! Rock breaks Scissors");
+            return("You win! Rock breaks Scissors");
         }
         else{
-            console.log("You lose! Paper beats Rock");
+            return("You lose! Paper beats Rock");
         }
     }
     else if(playerSelection=="scissors"){
         if(computerSelection=="paper"){
-            console.log("You win! Scissors cut Paper");
+            return("You win! Scissors cut Paper");
         }
         else{
-            console.log("You lose! Rock beats Scissors");
+            return("You lose! Rock beats Scissors");
         }
     }
     else if(playerSelection=="paper"){
         if(computerSelection=="rock"){
-            console.log("You win! Paper beats Rock");
+            return("You win! Paper beats Rock");
         }
         else{
-            console.log("You lose! Scissors cuts Paper");
+            return("You lose! Scissors cuts Paper");
         }
     }
     else{
-        console.log("Choice doesn't exist");
+        return("Choice doesn't exist");
     }
 }
