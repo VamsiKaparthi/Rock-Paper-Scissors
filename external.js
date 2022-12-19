@@ -4,3 +4,5 @@ function getComputerChoice(arr){
     const item = arr[randomIndex];
     return item;
 }
+//single round
+const playerSelection = "rock";
