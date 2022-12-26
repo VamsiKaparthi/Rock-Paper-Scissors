@@ -6,7 +6,7 @@ function getComputerChoice(arr){
 }
 
 //single round
-let playerSelection = "rock";
+let playerSelection = "";
 
 //actual function to check who won
 function playRound(playerSelection,computerSelection){
@@ -46,12 +46,16 @@ let paper = document.getElementById('paper');
 let scissor = document.getElementById('scissor');
 //taking User's input
 
-
+rock.addEventListener("click",()=>{
+    console.log(playRound('rock',getComputerChoice(arr)));
+});
+paper.addEventListener("click",()=>{
+    console.log(playRound('paper',getComputerChoice(arr)));
+});
+scissor.addEventListener("click",()=>{
+    console.log(playRound('scissors',getComputerChoice(arr)));
+});
 let ans = 'y';
 let n = 'k';//garbage value
-while(ans=='y'){
-    playerSelection = window.prompt("Enter rock, paper or scissors");
-    n = playerSelection.toLowerCase();
-    console.log(playRound(n,getComputerChoice(arr)));
-    ans = window.prompt("Press y to continue playing");
-}
+
+
