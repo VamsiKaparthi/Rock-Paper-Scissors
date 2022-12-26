@@ -55,7 +55,6 @@ paper.addEventListener("click",()=>{
 scissor.addEventListener("click",()=>{
     console.log(playRound('scissors',getComputerChoice(arr)));
 });
-let ans = 'y';
-let n = 'k';//garbage value
+
 
 
