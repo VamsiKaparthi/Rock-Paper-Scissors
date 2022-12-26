@@ -7,7 +7,8 @@ function getComputerChoice(arr){
 
 //single round
 let playerSelection = "";
-
+let playerScore = 0;
+let computerScore = 0;
 //actual function to check who won
 function playRound(playerSelection,computerSelection){
     if(playerSelection==computerSelection){
