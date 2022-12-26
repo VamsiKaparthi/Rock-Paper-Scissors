@@ -41,8 +41,12 @@ function playRound(playerSelection,computerSelection){
         return("Choice doesn't exist");
     }
 }
-
+let rock = document.getElementById('rock');
+let paper = document.getElementById('paper');
+let scissor = document.getElementById('scissor');
 //taking User's input
+
+
 let ans = 'y';
 let n = 'k';//garbage value
 while(ans=='y'){
