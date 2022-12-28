@@ -1,0 +1,6 @@
+.results{
+    background-color: #E27D60;
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+}
