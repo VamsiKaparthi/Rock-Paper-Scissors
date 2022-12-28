@@ -1,7 +1,7 @@
 body{
     background-color: #41B3A3;
     display: flex;
-    
+    font-family: 'Courier New', Courier, monospace;
     justify-content: center;
     padding-top: 200px;
     flex-direction: column;
