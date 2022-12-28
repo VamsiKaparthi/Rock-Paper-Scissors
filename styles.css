@@ -35,6 +35,8 @@ body{
     width: 395px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: larger;
     border-radius: 8px;
 }
 .board2{
@@ -44,6 +46,8 @@ body{
     display: flex;
     align-items: center;
     border-radius: 8px;
+    justify-content: center;
+    font-size: larger;
 }
 .choice{
     display: flex;

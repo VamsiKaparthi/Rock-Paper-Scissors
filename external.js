@@ -1,3 +1,5 @@
+const playerBoard = document.getElementById('b1');
+const computerBoard = document.getElementById('b2');
 const arr=['rock','paper','scissors'];
 function getComputerChoice(arr){
     const randomIndex = Math.floor(Math.random()*arr.length);
@@ -70,6 +72,9 @@ function game(e){
     }
     console.log(playerScore);
     console.log(computerScore);
+    
+    playerBoard.textContent = `${playerScore}`;
+    computerBoard.textContent = `${computerScore}`;
     if(playerScore==5||computerScore==5){
         if(playerScore==5){
             console.log("Yay! You've won the game");
