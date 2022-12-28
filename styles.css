@@ -30,6 +30,8 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  height: 200px;
+  width:260px;
 }
 button:hover{
     background-color: #bb8662;
