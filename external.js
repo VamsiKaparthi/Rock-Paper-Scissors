@@ -52,26 +52,30 @@ let scissor = document.getElementById('scissor');
 function restartGame(){
     const buttons = document.querySelectorAll("#buttons");
     buttons.forEach(button=>button.remove());
+    computerScore=0;
+    playerScore=0;
 }
 function game(e){
     let roundResult = playRound(this.id,getComputerChoice(arr));
-    if(roundResult[0] == 'w'){
-        playerScore++;
-        console.log('yes');
+    if(roundResult[0] =="w"){
+        ++playerScore;
+        console.log('round win');
     }
-    else if(roundResult[0]=='l'){
-        computerScore++;
-        console.log('no');
+    else if(roundResult[0]=="l"){
+        ++computerScore;
+        console.log('round lost');
     }
     else{
         console.log('tie');
     }
+    console.log(playerScore);
+    console.log(computerScore);
     if(playerScore==5||computerScore==5){
         if(playerScore==5){
             console.log("Yay! You've won the game");
         }
-        else{
-            console.log("You've lose the game");
+        else if(computerScore==5){
+            console.log("You've lost the game");
         }
         restartGame();
     }
