@@ -11,7 +11,10 @@ body{
     justify-content: space-around;
     padding: 10px;
 }
-
+.choice{
+    display: flex;
+    gap: 10px;
+}
 button {
   background-color: #E8A87C;
   border-radius: 8px;
