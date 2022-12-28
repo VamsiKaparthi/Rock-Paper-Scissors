@@ -1,5 +1,6 @@
 const playerBoard = document.getElementById('b1');
 const computerBoard = document.getElementById('b2');
+const final = document.getElementById('con');
 const arr=['rock','paper','scissors'];
 function getComputerChoice(arr){
     const randomIndex = Math.floor(Math.random()*arr.length);
@@ -41,7 +42,7 @@ function playRound(playerSelection,computerSelection){
         }
     }
     else{
-        return("Choice doesn't exist");
+        return['t',"It's a tie"];
     }
 }
 let rock = document.getElementById('rock');
@@ -70,20 +71,22 @@ function game(e){
     else{
         console.log('tie');
     }
-    console.log(playerScore);
-    console.log(computerScore);
     
     playerBoard.textContent = `${playerScore}`;
     computerBoard.textContent = `${computerScore}`;
+    con.textContent = `${roundResult[1]}`
     if(playerScore==5||computerScore==5){
         if(playerScore==5){
             console.log("Yay! You've won the game");
+            con.textContent = "Yay! You've won the game";
         }
         else if(computerScore==5){
             console.log("You've lost the game");
+            con.textContent = "You've lost the game";
         }
         restartGame();
     }
 }
+
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => button.addEventListener('click', game));

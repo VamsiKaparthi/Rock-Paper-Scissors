@@ -80,3 +80,13 @@ button {
 button:hover{
     background-color: #bb8662;
 }
+.conclusion{
+    height: 50px;
+    width: 100%;
+    background-color: #C38D9E;
+    margin-top: 20px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
