@@ -12,30 +12,30 @@ let computerScore = 0;
 //actual function to check who won
 function playRound(playerSelection,computerSelection){
     if(playerSelection==computerSelection){
-        console.log("It's a tie");
+        return['t',"It's a tie"];
     }
     else if(playerSelection=="rock"){
         if(computerSelection=="scissors"){
-            return("You win! Rock breaks Scissors");
+            return["w","You win! Rock breaks Scissors"];
         }
         else{
-            return("You lose! Paper beats Rock");
+            return["l","You lose! Paper beats Rock"];
         }
     }
     else if(playerSelection=="scissors"){
         if(computerSelection=="paper"){
-            return("You win! Scissors cut Paper");
+            return["w","You win! Scissors cut Paper"];
         }
         else{
-            return("You lose! Rock beats Scissors");
+            return["l","You lose! Rock beats Scissors"];
         }
     }
     else if(playerSelection=="paper"){
         if(computerSelection=="rock"){
-            return("You win! Paper beats Rock");
+            return["w","You win! Paper beats Rock"];
         }
         else{
-            return("You lose! Scissors cuts Paper");
+            return["w","You lose! Scissors cuts Paper"];
         }
     }
     else{
@@ -45,17 +45,36 @@ function playRound(playerSelection,computerSelection){
 let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
 let scissor = document.getElementById('scissor');
+
 //taking User's input
 
-rock.addEventListener("click",()=>{
-    console.log(playRound('rock',getComputerChoice(arr)));
-});
-paper.addEventListener("click",()=>{
-    console.log(playRound('paper',getComputerChoice(arr)));
-});
-scissor.addEventListener("click",()=>{
-    console.log(playRound('scissors',getComputerChoice(arr)));
-});
 
-
-
+function restartGame(){
+    const buttons = document.querySelectorAll("#buttons");
+    buttons.forEach(button=>button.remove());
+}
+function game(e){
+    let roundResult = playRound(this.id,getComputerChoice(arr));
+    if(roundResult[0] == 'w'){
+        playerScore++;
+        console.log('yes');
+    }
+    else if(roundResult[0]=='l'){
+        computerScore++;
+        console.log('no');
+    }
+    else{
+        console.log('tie');
+    }
+    if(playerScore==5||computerScore==5){
+        if(playerScore==5){
+            console.log("Yay! You've won the game");
+        }
+        else{
+            console.log("You've lose the game");
+        }
+        restartGame();
+    }
+}
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => button.addEventListener('click', game));
